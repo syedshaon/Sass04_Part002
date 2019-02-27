@@ -1,0 +1,255 @@
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+}
+
+/*  apply a natural box layout model to all elements  */
+* {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/* ------------- BODY ------------- */
+body {
+	font-family: $defaultFont;
+	font-size: 16px;
+	font-weight: $normalWeight;
+}
+
+
+
+
+/*  ------------- HEADER -------------  */
+header {
+	background-color: $primaryColor;
+	color: $secondaryColor;
+	padding: 1rem $gutter;
+
+	h1 {
+		font-size: 2rem;
+		font-weight: $normalWeight;
+	}
+
+	//end h1 rules
+
+	h2 {
+		font-size: 1.12rem;
+		font-weight: $normalWeight;
+	}
+
+	//end h2 rules
+
+
+	/*-----HEADER SOCIAL ICONS-----*/
+	ul.social {
+		float: right;
+	}
+
+	ul.social li {
+		list-style-type: none;
+		float: left;
+	}
+
+	ul.social li a {
+		color: white;
+		font-size: 1.8rem;
+		padding-left: .5rem;
+	}
+
+	ul.social li a:hover {
+		color: gold;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+// end header
+
+
+
+
+
+
+/*  ------------- NAV -------------  */
+nav {
+	background-color: $secondaryColor;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+
+	ul li {
+		float: left;
+		width: 25%;
+		border-right: 1px solid rgba(0, 0, 0, 0.3);
+	}
+
+	// end li
+	ul li:last-child {
+		border-right: none;
+	}
+
+	ul li a {
+		display: block;
+		text-align: center;
+		font-weight: $boldWeight;
+		padding: .5rem 0;
+		color: $primaryColor;
+		text-decoration: none;
+		transition: background 0.75s ease, color 0.75s ease;
+	}
+
+	// end anchors
+	ul li.active a {
+		background-color: darken($secondaryColor, 10%);
+	}
+
+	// end active
+	ul li a:hover {
+		color: $secondaryColor;
+		background-color: $primaryColor;
+	}
+
+	// end hover
+}
+
+// end nav
+
+
+
+
+
+
+/*  ------------- MAIN -------------  */
+main {
+	max-width: 60rem;
+	min-height: 20rem;
+
+	h1 {
+		font-size: 2rem;
+		margin: 1.5rem 0 .5rem 0;
+		color: $primaryColor;
+	}
+
+	// end h1
+	div {
+		width: 100%;
+		height: auto;
+		margin-bottom: 20px;
+		clear: both;
+	}
+
+	figure {
+		margin: 0 10px 10px 10px;
+		float: left;
+	}
+
+	.exmp1 figure {
+		shape-outside: circle(50% at 50% 50%);
+	}
+
+	.exmp2 figure {
+		shape-outside: polygon(0 0, 0% 100%, 100% 0);
+		clip-path: polygon(0 0, 0% 100%, 100% 0);
+	}
+
+	.exmp3 figure {
+		shape-outside: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 0 100%, 0 83%, 0% 43%, 0 0);
+		clip-path: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 0 100%, 0 83%, 0% 43%, 0 0);
+	}
+
+	.exmp4 figure {
+		shape-outside: polygon(36% 1%, 45% 26%, 51% 55%, 63% 80%, 68% 100%, 37% 100%, 0 100%, 0% 70%, 0% 35%, 0 1%);
+		clip-path: polygon(36% 1%, 45% 26%, 51% 55%, 63% 80%, 68% 100%, 37% 100%, 0 100%, 0% 70%, 0% 35%, 0 1%);
+	}
+
+	.exmp5 figure {
+		shape-outside: polygon(58% 0, 100% 50%, 50% 100%, 0% 50%);
+		clip-path: polygon(58% 0, 100% 50%, 50% 100%, 0% 50%);
+	}
+
+	.exmp6 figure {
+		shape-outside: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+		clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+	}
+
+	.exmp7 figure {
+		shape-outside: polygon(0 0, 0% 100%, 100% 0);
+		clip-path: polygon(0 0, 0% 100%, 100% 0);
+	}
+
+	.exmp8 figure {
+		shape-outside: polygon(0 0, 0% 100%, 100% 0);
+		clip-path: polygon(0 0, 0% 100%, 100% 0);
+	}
+
+	.exmp9 figure {
+		shape-outside: polygon(0 0, 0% 100%, 100% 0);
+		clip-path: polygon(0 0, 0% 100%, 100% 0);
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+// end main
+
+
+
+
+/*  ------------- FOOTER -------------  */
+footer {
+	width: 100%;
+	background-color: $primaryColor;
+
+	p {
+		text-align: center;
+		color: $secondaryColor;
+		padding: .75rem 0;
+		font-size: .9rem;
+	}
+
+	// end p
+
+	p a {
+		color: $secondaryColor;
+	}
+}
+
+// end footer
+
+
+
+
+/*----- Clearfix: Force an Element not to collapse -----*/
+.clearfix:after {
+	content: "";
+	display: table;
+	clear: both;
+}
